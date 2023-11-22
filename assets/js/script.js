@@ -90,7 +90,14 @@ function parallaxIt(e, target, movement) {
 
 // Dropdown Start
 let dropDown = document.querySelector(".dropdown-step");
-
 dropDown.addEventListener("click", () => {
-    dropDown.classList.toggle("active");
+  dropDown.classList.toggle("active");
+  if (dropDown.classList == "dropdown-step active") {
+    dropDown.childNodes[0].setAttribute("data-replace", "Solution -");
+    dropDown.childNodes[0].childNodes[0].innerHTML = "Solution -";
+  }
+  else{
+    dropDown.childNodes[0].setAttribute("data-replace", "Solution +");
+    dropDown.childNodes[0].childNodes[0].innerHTML = "Solution +";
+  }
 });
