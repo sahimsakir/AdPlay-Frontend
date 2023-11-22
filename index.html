@@ -27,7 +27,7 @@
             <div class="logo">
                 <a href="index.html"><img src="assets/images/AdPlay-Logo-1.png" alt=""></a>
             </div>
-            <div class="nav-bar">
+            <div class="nav-bar active">
                 <nav>
                     <ul>
                         <li><a href="" data-replace="Home"><span>Home</span></a></li>
@@ -52,6 +52,17 @@
                     <button class="call-to-action-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started
                         <span></span><span></span><span></span><span></span></button>
                 </div>
+                <button class="hamburger"
+                    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                    aria-label="Main Menu">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                        <path class="line line1"
+                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3"
+                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
@@ -69,6 +80,10 @@
         <div class="scroll-action">
             <lottie-player src="https://lottie.host/5670d3a5-313b-4582-9bd8-1e94668bb0d4/rwL2YPQIVU.json"
                 background="transparent" speed="2" autoplay loop></lottie-player>
+        </div>
+        <div class="audio-sound">
+            <lottie-player src="https://lottie.host/dad518ee-a19b-4c1a-bb99-1f51249f7013/GZvTgHO03w.json"
+                background="transparent" speed="1" autoplay loop></lottie-player>
         </div>
     </section>
 

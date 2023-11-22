@@ -95,8 +95,7 @@ dropDown.addEventListener("click", () => {
   if (dropDown.classList == "dropdown-step active") {
     dropDown.childNodes[0].setAttribute("data-replace", "Solution -");
     dropDown.childNodes[0].childNodes[0].innerHTML = "Solution -";
-  }
-  else{
+  } else {
     dropDown.childNodes[0].setAttribute("data-replace", "Solution +");
     dropDown.childNodes[0].childNodes[0].innerHTML = "Solution +";
   }
@@ -104,7 +103,23 @@ dropDown.addEventListener("click", () => {
 // Dropdown End
 
 // Audio Start
+let audioSound = document.querySelector(".audio-sound");
+var audio = document.querySelector("audio");
 document.querySelector("body").addEventListener("click", (event) => {
-  document.querySelector("audio").play();
+    audioSound.classList.toggle("active");
+  if (audioSound.classList == "audio-sound active") {
+    audio.play();
+    audioSound.style.display = "block";
+  } else {
+    audio.pause();
+    audioSound.style.display = "none";
+    
+  }
+  
 });
+
+// audioSound.addEventListener("click", (event) => {
+//   console.log("hi");
+//   audio.pause();
+// });
 //  Audio End
