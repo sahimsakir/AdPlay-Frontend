@@ -104,7 +104,7 @@ dropDown.addEventListener("click", () => {
 // Dropdown End
 
 // Audio Start
-window.addEventListener("load", (event) => {
-    document.querySelector("audio").play();
-  });
+document.querySelector("body").addEventListener("click", (event) => {
+  document.querySelector("audio").play();
+});
 //  Audio End
