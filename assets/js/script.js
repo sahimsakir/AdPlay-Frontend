@@ -87,3 +87,10 @@ function parallaxIt(e, target, movement) {
 }
 
 // Tilt End
+
+// Dropdown Start
+let dropDown = document.querySelector(".dropdown-step");
+
+dropDown.addEventListener("click", () => {
+    dropDown.classList.toggle("active");
+});

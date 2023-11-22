@@ -31,15 +31,22 @@
                 <nav>
                     <ul>
                         <li><a href="" data-replace="Home"><span>Home</span></a></li>
-                        <li><a href="" data-replace="About"><span>About</span></a></li>
-                        <li><a href=""
-                                data-replace="Solution +"><span>Solution +</span></a></li>
+                        <li><a href="#" data-replace="About"><span>About</span></a></li>
+                        <li class="dropdown-step"><a href="javascript:void(0)" data-replace="Solution +"><span>Solution +</span></a>
+                        <ul>
+                            <li><a href="" data-replace="Global DSP"><span>Global DSP</span></a></li>
+                            <li><a href="" data-replace="Native Advertising"><span>Native Advertising</span></a></li>
+                            <li><a href="" data-replace="Rich Media Creatives"><span>Rich Media Creatives</span></a></li>
+                            <li><a href="" data-replace="Gamification"><span>Gamification</span></a></li>
+                            <li><a href="" data-replace="CPAAS"><span>CPAAS</span></a></li>
+                        </ul></li>
                         <li><a href="" data-replace="Creative Gallery"><span>Creative Gallery</span></a></li>
                         <li><a href="" data-replace="Contact"><span>Contact</span></a></li>
                     </ul>
                 </nav>
                 <div class="call-to-action">
-                    <button class="call-to-action-btn">Get Started <span></span><span></span><span></span><span></span></button>
+                    <button class="call-to-action-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started
+                        <span></span><span></span><span></span><span></span></button>
                 </div>
             </div>
         </div>
@@ -60,6 +67,38 @@
                 background="transparent" speed="2" autoplay loop></lottie-player>
         </div>
     </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4 font-weight-bold" id="exampleModalLabel">Schedule Campaign</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="company_name">Company Name</label>
+                        <input type="text" name="company_name" placeholder="Enter Your Company Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="company_email">Company Email</label>
+                        <input type="email" name="company_email" placeholder="Enter Your Company Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" placeholder="Enter Your Message" rows="5" cols="70"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="call-to-action-btn">Submit
+                        <span></span><span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- custon Cursor -->

@@ -22,7 +22,7 @@ header {
     width: 100%;
     margin: 20px 0px;
     background-color: transparent;
-    z-index: 99999;
+    z-index: 100;
     transition: all 0.5s ease-in;
 }
 
@@ -38,15 +38,11 @@ header.sticky {
 }
 
 .menu-bar.sticky {
-    /* background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(165, 163, 163, 0.2);
     border-radius: 50px;
-    box-shadow: 4px 4px 8px 1px rgb(41, 41, 41); */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 header .menu-bar .logo {
@@ -131,6 +127,73 @@ nav ul li a:hover span {
     transform: translate3d(-200%, 0, 0);
 }
 
+.dropdown-step {
+    position: relative;
+    top: -3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-step ul {
+    position: absolute;
+    width: max-content;
+    top: 50px;
+    left: -35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-step li {
+    width: 100%;
+    background: rgba(79, 79, 79, 0.44);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px 0px;
+    display: none;
+}
+
+.dropdown-step.active li {
+    display: inline-block;
+}
+
+.dropdown-step.active li:nth-child(1) {
+    animation: animate 300ms ease-in-out;
+}
+
+.dropdown-step.active li:nth-child(2) {
+    animation: animate 450ms ease-in-out;
+}
+
+.dropdown-step.active li:nth-child(3) {
+    animation: animate 600ms ease-in-out;
+}
+
+.dropdown-step.active li:nth-child(4) {
+    animation: animate 750ms ease-in-out;
+}
+
+.dropdown-step.active li:nth-child(5) {
+    animation: animate 900ms ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-60px);
+    }
+
+    80% {
+        transform: scale(1.2) translateY(10px);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
 
 .call-to-action-btn {
     --c: #e4222a;
@@ -266,7 +329,7 @@ nav ul li a:hover span {
     left: 0;
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
-    z-index: 9999999999;
+    z-index: 1000000;
 }
 
 .cursor2 {
@@ -279,6 +342,7 @@ nav ul li a:hover span {
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: width .3s, height .3s, opacity .3s;
+    z-index: 1000000;
 }
 
 .hover {
@@ -293,3 +357,75 @@ nav ul li a:hover span {
 }
 
 /* Custom Cursor End */
+
+/* Modal Start */
+.modal-content {
+    background: rgba(163, 162, 162, 0.2) !important;
+    border-radius: 25px !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.modal-header {
+    padding: 30px !important;
+    padding-bottom: 0px !important;
+    border-bottom: none !important;
+    border-top-left-radius: none !important;
+    border-top-right-radius: none !important;
+}
+
+.modal-body {
+    padding: 30px !important;
+    padding-top: 0px !important;
+}
+
+.modal-body label {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.modal-body input,
+.modal-body textarea {
+    width: 80%;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(79, 79, 79, 0.44);
+    color: #ffffff;
+}
+
+.modal-body textarea {
+    border-radius: 25px;
+}
+
+.modal-body input::placeholder,
+.modal-body textarea::placeholder {
+    color: #c9c7c7;
+}
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+    box-shadow: 8px 8px 2px 1px rgb(78, 78, 78);
+    border: none !important;
+}
+
+.modal-footer {
+    padding: 30px !important;
+    border-top: none !important;
+    border-bottom-right-radius: none !important;
+    border-bottom-left-radius: none !important;
+}
+
+.btn-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    margin: 0 !important;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+/* Modal End */
