@@ -101,3 +101,10 @@ dropDown.addEventListener("click", () => {
     dropDown.childNodes[0].childNodes[0].innerHTML = "Solution +";
   }
 });
+// Dropdown End
+
+// Audio Start
+window.addEventListener("load", (event) => {
+    document.querySelector("audio").play();
+  });
+//  Audio End
