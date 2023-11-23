@@ -1,10 +1,13 @@
 // Scrolly Header Start
 
 window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
-  var menuBar = document.querySelector(".menu-bar");
-  header.classList.toggle("sticky", window.scrollY > 0);
-  menuBar.classList.toggle("sticky", window.scrollY > 0);
+  var checkOverlay = document.querySelector("#overlay");
+  if (!checkOverlay.classList.contains("active")) {
+    var header = document.querySelector("header");
+    var menuBar = document.querySelector(".menu-bar");
+    header.classList.toggle("sticky", window.scrollY > 0);
+    menuBar.classList.toggle("sticky", window.scrollY > 0);
+  }
 });
 
 //   Scrolly Header End
@@ -49,25 +52,6 @@ a.forEach((item) => {
 
 // Custom Cursor End
 
-// Text Magnify Start
-
-const h4 = document.querySelector("h4");
-var arrayH4 = h4.innerHTML.split(" ");
-var textEffect = "";
-
-arrayH4.forEach((index) => {
-  for (let i = 0; i < index.length; i++) {
-    textEffect += `<h2>${index[i]}</h2>`;
-  }
-  textEffect = textEffect + `<h2>&nbsp;</h2>`;
-});
-
-h4.innerHTML = textEffect;
-const letters = document.querySelectorAll("h2");
-letters.forEach((letter) => letter.classList.add("effect"));
-
-// Text Magnify End
-
 // Tilt Start
 
 $(".main-content").mousemove(function (e) {
@@ -93,11 +77,11 @@ let dropDown = document.querySelector(".dropdown-step");
 dropDown.addEventListener("click", () => {
   dropDown.classList.toggle("active");
   if (dropDown.classList == "dropdown-step active") {
-    dropDown.childNodes[0].setAttribute("data-replace", "Solution -");
-    dropDown.childNodes[0].childNodes[0].innerHTML = "Solution -";
+    dropDown.firstElementChild.setAttribute("data-replace", "Solution -");
+    dropDown.firstElementChild.firstElementChild.innerHTML = "Solution -";
   } else {
-    dropDown.childNodes[0].setAttribute("data-replace", "Solution +");
-    dropDown.childNodes[0].childNodes[0].innerHTML = "Solution +";
+    dropDown.firstElementChild.setAttribute("data-replace", "Solution +");
+    dropDown.firstElementChild.firstElementChild.innerHTML = "Solution +";
   }
 });
 // Dropdown End
@@ -106,20 +90,44 @@ dropDown.addEventListener("click", () => {
 let audioSound = document.querySelector(".audio-sound");
 var audio = document.querySelector("audio");
 document.querySelector("body").addEventListener("click", (event) => {
-    audioSound.classList.toggle("active");
+  audioSound.classList.toggle("active");
   if (audioSound.classList == "audio-sound active") {
     audio.play();
     audioSound.style.display = "block";
   } else {
     audio.pause();
     audioSound.style.display = "none";
-    
   }
-  
 });
 
-// audioSound.addEventListener("click", (event) => {
-//   console.log("hi");
-//   audio.pause();
-// });
-//  Audio End
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", (event) => {
+  let overlay = document.querySelector(".overlay");
+  let navBar = document.querySelector(".nav-bar");
+  overlay.classList.toggle("active");
+  navBar.classList.toggle("active");
+  document.querySelector("header").classList.remove('sticky');
+  document.querySelector(".menu-bar").classList.remove('sticky');
+});
+
+if (window.innerWidth > 450) {
+  // Text Magnify Start
+
+  const h4 = document.querySelector("h4");
+  var arrayH4 = h4.innerHTML.split(" ");
+  var textEffect = "";
+
+  arrayH4.forEach((index) => {
+    for (let i = 0; i < index.length; i++) {
+      textEffect += `<h2>${index[i]}</h2>`;
+    }
+    textEffect = textEffect + `<h2>&nbsp;</h2>`;
+  });
+
+  h4.innerHTML = textEffect;
+  const letters = document.querySelectorAll("h2");
+  letters.forEach((letter) => letter.classList.add("effect"));
+
+  // Text Magnify End
+}
