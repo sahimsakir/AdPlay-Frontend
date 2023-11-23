@@ -300,8 +300,9 @@ nav ul li a:hover span {
 }
 
 .main-content video {
-  width: 100%;
-  background-size: cover;
+position: absolute;
+top: 0;
+left: 0;
 }
 
 .scroll-action {
@@ -587,11 +588,16 @@ nav ul li a:hover span {
       transform: translateX(0%);
     }
   }
-
+  .text-content span{
+    width: 80%;
+}
   .cursor,
   .cursor2 {
     display: none;
   }
+  .main-content video {
+    left: -70%;
+}
 }
 
 @media only screen and (max-width: 450px) {
@@ -612,11 +618,5 @@ nav ul li a:hover span {
 .menu-bar{
     padding: 0px 30px;
 }
-video{
-    height: 100%;
-    background-position: contain;
-}
-.text-content span{
-    width: 80%;
-}
+
 }

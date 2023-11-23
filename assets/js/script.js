@@ -103,12 +103,13 @@ document.querySelector("body").addEventListener("click", (event) => {
 const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", (event) => {
+  document.querySelector(".menu-bar").classList.remove("sticky");
   let overlay = document.querySelector(".overlay");
   let navBar = document.querySelector(".nav-bar");
   overlay.classList.toggle("active");
   navBar.classList.toggle("active");
-  document.querySelector("header").classList.remove('sticky');
-  document.querySelector(".menu-bar").classList.remove('sticky');
+  // document.querySelector("header").classList.remove("sticky");
+  
 });
 
 if (window.innerWidth > 450) {
