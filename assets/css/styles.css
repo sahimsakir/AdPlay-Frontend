@@ -365,6 +365,7 @@ left: 0;
     width: 5%;
     bottom: 0;
     margin: 20px;
+    z-index: 999999;
 }
 
 /* Custom Cursor  Start*/
@@ -613,6 +614,10 @@ left: 0;
 
 .modal-body textarea{
     border-radius: 15px;
+}
+.audio-sound,
+.scroll-action {
+    bottom: 100px;
 }
 
 .menu-bar{

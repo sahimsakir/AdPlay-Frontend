@@ -54,11 +54,6 @@ a.forEach((item) => {
 
 // Tilt Start
 
-$(".main-content").mousemove(function (e) {
-  parallaxIt(e, ".text-content", -100);
-  parallaxIt(e, "video", -100);
-});
-
 function parallaxIt(e, target, movement) {
   var $this = $(".main-content");
   var relX = e.pageX - $this.offset().left;
@@ -113,6 +108,11 @@ hamburger.addEventListener("click", (event) => {
 });
 
 if (window.innerWidth > 450) {
+
+  $(".main-content").mousemove(function (e) {
+    parallaxIt(e, ".text-content", -50);
+    parallaxIt(e, "video", -100);
+  });
   // Text Magnify Start
 
   const h4 = document.querySelector("h4");
