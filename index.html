@@ -1,131 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#e4222a" />
     <title>AdPlay Technology - Leading Ad Network in Bangladesh</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon-152x152.png">
-    <link rel="shortcut icon" href="assets/images/favicon/favicon-32x32.png" type="image/x-icon">
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/favicon/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/dce09b9dbf.js"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container menu-bar d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <a href="index.html"><img src="assets/images/AdPlay-Logo-1.png" alt=""></a>
-            </div>
-            <div class="nav-bar active">
-                <nav>
-                    <ul>
-                        <li><a href="" data-replace="Home"><span>Home</span></a></li>
-                        <li><a href="#" data-replace="About"><span>About</span></a></li>
-                        <li class="dropdown-step"><a href="javascript:void(0)" data-replace="Solution +"><span>Solution
-                                    +</span></a>
-                            <ul>
-                                <li><a href="" data-replace="Global DSP"><span>Global DSP</span></a></li>
-                                <li><a href="" data-replace="Native Advertising"><span>Native Advertising</span></a>
-                                </li>
-                                <li><a href="" data-replace="Rich Media Creatives"><span>Rich Media Creatives</span></a>
-                                </li>
-                                <li><a href="" data-replace="Gamification"><span>Gamification</span></a></li>
-                                <li><a href="" data-replace="CPAAS"><span>CPAAS</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="" data-replace="Creative Gallery"><span>Creative Gallery</span></a></li>
-                        <li><a href="" data-replace="Contact"><span>Contact</span></a></li>
-                    </ul>
-                </nav>
-                <div class="call-to-action">
-                    <button class="call-to-action-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started
-                        <span></span><span></span><span></span><span></span></button>
-                </div>
-                <button class="hamburger"
-                    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-                    aria-label="Main Menu">
-                    <svg width="100" height="100" viewBox="0 0 100 100">
-                        <path class="line line1"
-                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                        <path class="line line2" d="M 20,50 H 80" />
-                        <path class="line line3"
-                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                    </svg>
-                </button>
-            </div>
+      <div
+        class="container menu-bar d-flex justify-content-between align-items-center"
+      >
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/images/AdPlay-Logo-1.png" alt=""
+          /></a>
         </div>
+        <div id="overlay" class="overlay"></div>
+        <div class="nav-bar">
+          <nav>
+            <ul>
+              <li>
+                <a href="" data-replace="Home"><span>Home</span></a>
+              </li>
+              <li>
+                <a href="#" data-replace="About"><span>About</span></a>
+              </li>
+              <li class="dropdown-step">
+                <a href="javascript:void(0)" data-replace="Solution +"
+                  ><span>Solution +</span></a
+                >
+                <ul>
+                  <li>
+                    <a href="" data-replace="Global DSP"
+                      ><span>Global DSP</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="" data-replace="Native Advertising"
+                      ><span>Native Advertising</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="" data-replace="Rich Media Creatives"
+                      ><span>Rich Media Creatives</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="" data-replace="Gamification"
+                      ><span>Gamification</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="" data-replace="CPAAS"><span>CPAAS</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="" data-replace="Creative Gallery"
+                  ><span>Creative Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="" data-replace="Contact"><span>Contact</span></a>
+              </li>
+              <li class="call-to-action">
+                <button
+                  class="call-to-action-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Get Started <span></span><span></span><span></span
+                  ><span></span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button
+          class="hamburger"
+          onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+          aria-label="Main Menu"
+        >
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+            />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+            />
+          </svg>
+        </button>
+      </div>
     </header>
     <section class="main-content">
-        <video src="assets/videos/background-video.webm" muted autoplay loop></video>
-        <div class="text-content">
-            <p>Your Success, Our Priority</p>
-            <h4>Elevate Your Brand with Our Ad Serving Expertise</h4>
-            <span>Digital Ad Tech company empowering brands and publishers to execute data intelligence-driven campaigns
-                on digital
-                media. Our integrated tech stack covers creative management, programmatic media buying, and data
-                analytics with a
-                mission to deliver ROI on media investment.</span>
-        </div>
-        <div class="scroll-action">
-            <lottie-player src="https://lottie.host/5670d3a5-313b-4582-9bd8-1e94668bb0d4/rwL2YPQIVU.json"
-                background="transparent" speed="2" autoplay loop></lottie-player>
-        </div>
-        <div class="audio-sound">
-            <lottie-player src="https://lottie.host/dad518ee-a19b-4c1a-bb99-1f51249f7013/GZvTgHO03w.json"
-                background="transparent" speed="1" autoplay loop></lottie-player>
-        </div>
+      <video
+        src="assets/videos/background-video.webm"
+        muted
+        autoplay
+        loop
+      ></video>
+      <div class="text-content">
+        <p>Your Success, Our Priority</p>
+        <h4>Elevate Your Brand with Our Ad Serving Expertise</h4>
+        <span
+          >Digital Ad Tech company empowering brands and publishers to execute
+          data intelligence-driven campaigns on digital media. Our integrated
+          tech stack covers creative management, programmatic media buying, and
+          data analytics with a mission to deliver ROI on media
+          investment.</span
+        >
+      </div>
+      <div class="scroll-action">
+        <lottie-player
+          src="https://lottie.host/5670d3a5-313b-4582-9bd8-1e94668bb0d4/rwL2YPQIVU.json"
+          background="transparent"
+          speed="2"
+          autoplay
+          loop
+        ></lottie-player>
+      </div>
+      <div class="audio-sound">
+        <lottie-player
+          src="https://lottie.host/dad518ee-a19b-4c1a-bb99-1f51249f7013/GZvTgHO03w.json"
+          background="transparent"
+          speed="1"
+          autoplay
+          loop
+        ></lottie-player>
+      </div>
     </section>
 
-
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-4 font-weight-bold" id="exampleModalLabel">Schedule Campaign</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="company_name">Company Name</label>
-                        <input type="text" name="company_name" placeholder="Enter Your Company Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="company_email">Company Email</label>
-                        <input type="email" name="company_email" placeholder="Enter Your Company Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" placeholder="Enter Your Message" rows="5" cols="70"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="call-to-action-btn">Submit
-                        <span></span><span></span><span></span><span></span>
-                    </button>
-                </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-4 font-weight-bold"
+              id="exampleModalLabel"
+            >
+              Schedule Campaign
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="company_name">Company Name</label>
+              <input
+                type="text"
+                name="company_name"
+                placeholder="Enter Your Company Name"
+              />
             </div>
+            <div class="form-group">
+              <label for="company_email">Company Email</label>
+              <input
+                type="email"
+                name="company_email"
+                placeholder="Enter Your Company Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                placeholder="Enter Your Message"
+                rows="5"
+                cols="70"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="call-to-action-btn">
+              Submit <span></span><span></span><span></span><span></span>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Modal End -->
 
     <!-- Audio Start -->
     <audio>
-        <source src="assets/audio/background-audio.mp3" type="audio/mpeg">
+      <source src="assets/audio/background-audio.mp3" type="audio/mpeg" />
     </audio>
     <!-- Audio End -->
-
 
     <!-- custon Cursor -->
     <div class="cursor"></div>
@@ -146,6 +244,5 @@
 
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
