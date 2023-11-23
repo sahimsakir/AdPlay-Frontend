@@ -360,9 +360,9 @@ nav ul li a:hover span {
 
 /* Audio Start */
 .audio-sound{
-    position: absolute;
+    position: fixed;
     display: none;
-    width: 5%;
+    width: 100px;
     bottom: 0;
     margin: 20px;
 }
